@@ -1,7 +1,11 @@
 require'utils'
 local packer_bootstrap = utils.bootstrap_packer()
+vim.cmd('packadd packer.nvim')
 require'packer'.startup(function(use)
-  use'wbthomason/packer.nvim'
+  use{
+    'wbthomason/packer.nvim',
+    opt = true,
+  }
   use{
     'nvim-treesitter/nvim-treesitter',
     run = function()
