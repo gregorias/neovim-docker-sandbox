@@ -4,9 +4,13 @@
 FROM ubuntu:22.10
 WORKDIR /root
 RUN apt-get update
+# Install useful utilities
 RUN apt-get install -y curl
 RUN apt-get install -y fish
 RUN apt-get install -y git
+RUN apt-get install -y aptitude
+RUN apt-get install -y pip
+RUN apt-get install -y python3-venv
 
 # Install Neovim
 # We install from source instead of using apt-get, because I found that the
