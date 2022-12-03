@@ -10,7 +10,7 @@ RUN apt-get install -y fish
 RUN apt-get install -y git
 RUN apt-get install -y aptitude
 RUN apt-get install -y pip
-RUN apt-get install -y python3-venv
+RUN apt-get install -y python3-venv python3-neovim
 # Necessary for GHCup
 RUN apt-get install -y build-essential libffi-dev libffi8ubuntu1 libgmp-dev libgmp10 libnuma-dev libncurses-dev libncurses5 libtinfo5
 
