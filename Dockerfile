@@ -11,6 +11,8 @@ RUN apt-get install -y git
 RUN apt-get install -y aptitude
 RUN apt-get install -y pip
 RUN apt-get install -y python3-venv
+# Necessary for GHCup
+RUN apt-get install -y build-essential libffi-dev libffi8ubuntu1 libgmp-dev libgmp10 libnuma-dev libncurses-dev libncurses5 libtinfo5
 
 # Install Neovim
 # We install from source instead of using apt-get, because I found that the
