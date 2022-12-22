@@ -13,19 +13,20 @@ To build and run this container, execute the following snippet.
   docker build -t neovim-docker-sandbox .
   ```
 
-2. Run the image:
+1. Run the image:
 
   ```shell
-  docker run -it neovim-docker-sandbox:latest fish
+  docker run -v $(pwd)/config:/root/.config/nvim \
+             -it neovim-docker-sandbox:latest fish
   ```
 
-3. Bootstrap Neovim's plugins:
+1. Bootstrap Neovim's plugins:
 
   ```shell
   nvim # and run :PackerSync
   ```
 
-4. Update the image in a separate terminal:
+1. Update the image in a separate terminal:
 
   ```shell
   docker ps # Check the container ID.

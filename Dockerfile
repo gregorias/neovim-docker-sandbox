@@ -19,14 +19,8 @@ RUN apt-get install -y build-essential libffi-dev libffi8ubuntu1 libgmp-dev libg
 # apt-get M1 version doesn't work well with Packer
 # (https://github.com/nvim-telescope/telescope.nvim/issues/2158#issuecomment-1237716752).
 RUN apt-get install -y ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen
-RUN git clone --depth=1 --branch=release-0.8 https://github.com/neovim/neovim
+RUN git clone --depth=1 --branch=v0.8.1 https://github.com/neovim/neovim
 WORKDIR neovim
 RUN make CMAKE_BUILD_TYPE=Release
 RUN make install
 WORKDIR ..
-
-RUN mkdir -p .config/nvim/lua
-WORKDIR .config/nvim
-COPY config/init.lua .
-COPY config/lua/utils.lua lua/
-WORKDIR ../..
