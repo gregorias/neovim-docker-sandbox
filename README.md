@@ -18,7 +18,7 @@ To build and run this container, execute the following snippet.
     ```
 1. Bootstrap Neovim's plugins:
     ```shell
-    nvim # and run :PackerSync
+    nvim
     ```
 1. Update the image in a separate terminal:
     ```shell
