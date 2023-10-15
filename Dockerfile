@@ -19,7 +19,7 @@ RUN apt-get install -y build-essential libffi-dev libffi8ubuntu1 libgmp-dev libg
 # apt-get M1 version doesn't work well with Packer
 # (https://github.com/nvim-telescope/telescope.nvim/issues/2158#issuecomment-1237716752).
 RUN apt-get install -y ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen
-RUN git clone --depth=1 --branch=v0.9.2 https://github.com/neovim/neovim
+RUN git clone --depth=1 --branch=v0.9.4 https://github.com/neovim/neovim
 WORKDIR neovim
 RUN make CMAKE_BUILD_TYPE=Release
 RUN make install
