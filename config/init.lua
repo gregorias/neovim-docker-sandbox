@@ -27,11 +27,5 @@ require'lazy'.setup({
       }
     end,
   },
-  },
-  {
-    concurrency = 16,
-    ui = {
-      border = "single",
-    },
   }
 )
